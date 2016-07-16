@@ -1,0 +1,19 @@
+{
+  "name": "creightonsummerresearch2016",
+  "version": "1.0.0",
+  "description": "JuanCarlos Chavez Summer Research with Creighton University for the Summer of 2016",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanCarlosC/CreightonSummerResearch2016.git"
+  },
+  "author": "JuanCarlos Chavez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanCarlosC/CreightonSummerResearch2016/issues"
+  },
+  "homepage": "https://github.com/JuanCarlosC/CreightonSummerResearch2016#readme"
+}

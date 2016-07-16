@@ -1,0 +1,116 @@
+html, body, .super-wrapper, .app-wrapper {
+	height: 100%;
+}
+body {
+	font-family: 'Roboto', sans-serif !important;
+	margin: 0;
+}
+.super-wrapper {
+	height: 100%;
+}
+.app-wrapper {
+	position: relative;
+	min-height: 0;
+}
+.top-app-bar {
+	position: relative;
+	display: block;
+	flex: 0 0 auto;
+	background-color: #0154a6;
+	color: white;
+	box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14),0 3px 3px -2px rgba(0,0,0,0.12),0 1px 8px 0 rgba(0,0,0,0.2);
+	z-index: 20;
+}
+.app-bar {
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+.side-nav-bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 48px;
+	box-sizing: border-box;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+	z-index: 11;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 256px;
+	transition: width .3s cubic-bezier(0.4,0.0,0.2,1);
+}
+.inner-side-nav-container {
+	flex:1 1 auto;
+	padding-bottom: 32px;
+	transform: translate3d(0,0,0);
+	display: block;
+	background-color: white;
+	flex-direction: column;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.inner-side-nav-container-footer {
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.12);
+    flex: 0 0 auto;
+    position: relative;
+    overflow: hidden;
+    visibility:  visible;
+}
+.module-host {
+	height: 0;
+}
+.module-contents {
+	left: 256px;
+	position: absolute;
+	top: 48px;
+	bottom: 0;
+	right: 0;
+	overflow-y: auto;
+}
+.module-contents-header {
+	padding: 10px; 
+	padding-left: 33px; 
+	width: 100%; 
+	/*background: #0069d0;*/
+	background-color: #019CDB;
+	min-height:56px; 
+	font-size: 20px; 
+	color: white; 
+	border-bottom: 1px solid #eeeeee;
+}
+.app-name {
+	padding: 10px; 
+	background: #fafafa; 
+	text-align: center; 
+	min-height:48px; 
+	font-size: 18px; 
+	line-height: 48px; 
+	border-bottom: 1px solid #eeeeee;
+}
+.app-name > i:hover, .inner-side-nav-container-footer > div > i:hover  {
+	color: #FFA300;
+	font-size: 20px;
+	cursor: pointer;
+}
+.app-section {
+	padding: 15px 30px;
+	background-color: white;
+	cursor: pointer;
+}
+.app-section:hover {
+	background-color: lightgray;
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    -ms-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
+}
+.app-section .title{
+	margin-left: 15px;
+}
+.app-section .section-icon {
+	min-width: 20px;
+    display: inline-block;
+}
