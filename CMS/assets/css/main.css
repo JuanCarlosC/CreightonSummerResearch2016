@@ -51,6 +51,10 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+.inner-side-nav-container > a {
+	color: black;
+    text-decoration: none;
+}
 .inner-side-nav-container-footer {
     box-shadow: 0 -1px 0 rgba(0,0,0,0.12);
     flex: 0 0 auto;
@@ -61,17 +65,25 @@ body {
 .module-host {
 	height: 0;
 }
+.feature-card {
+	background-color: white;
+	min-height: 600px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
+}
 .module-contents {
 	left: 256px;
 	position: absolute;
+	background-color: whitesmoke;
 	top: 48px;
 	bottom: 0;
 	right: 0;
 	overflow-y: auto;
+	min-width: 430px;
 }
 .module-contents-header {
 	padding: 10px; 
 	padding-left: 33px; 
+	padding-bottom: 0; 
 	width: 100%; 
 	/*background: #0069d0;*/
 	background-color: #019CDB;
@@ -113,4 +125,33 @@ body {
 .app-section .section-icon {
 	min-width: 20px;
     display: inline-block;
+}
+
+/*module styling*/
+.features > div.tab {
+	font-size: 14px;
+    text-align: center;
+    padding: 12px 24px;
+    -webkit-transition: background-color .35s cubic-bezier(0.35,0,0.25,1);
+    transition: background-color .35s cubic-bezier(0.35,0,0.25,1);
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 500;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+}
+.features > div.tab.selected {
+	border-bottom: 3px solid white;
+}
+.features > div.tab:hover {
+	border-bottom: 3px solid white;
+}
+
+
+.module-contents-header > div.feature {
+	flex-direction: column;
 }

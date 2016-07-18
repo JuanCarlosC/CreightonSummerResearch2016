@@ -5,17 +5,38 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-switch.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/imgs/favicon.ico/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/imgs/favicon.ico/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/imgs/favicon.ico/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/imgs/favicon.ico/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/imgs/favicon.ico/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/imgs/favicon.ico/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/imgs/favicon.ico/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/imgs/favicon.ico/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/favicon.ico/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="assets/imgs/favicon.ico/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon.ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/imgs/favicon.ico/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon.ico/favicon-16x16.png">
+	<link rel="manifest" href="assets/imgs/favicon.ico/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
 	<!-- IMPORT JS PACKAGES -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.5/angular-resource.min.js"></script>
-	<script type="text/javascript" src="assets/js/cuApp.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-animate.min.js"></script>
 </head>
 <body ng-app="cuApp">
 	<div class="super-wrapper" ng-controller="cuModuleManager">
 		<section class="app-wrapper">
+
 			<!-- //////////////   APP TOP NAV BAR   ////////////// -->
 			<div class="top-app-bar">
 				<div class="app-bar">
@@ -30,70 +51,89 @@
 			<div class="side-nav-bar">
 				<div class="inner-side-nav-container">
 					<!-- APP NAME -->
+					
 					<div class="app-name">
-						iCreighton &nbsp; <i class="fa fa-cog" aria-hidden="true"></i>
+						<a style="text-decoration:none;"href="#/">iCreighton &nbsp;</a> <i class="fa fa-cog" aria-hidden="true"></i>
 					</div>
+					
 
 					<!-- Analytics -->
-					<div style="padding: 20px 15px;color: #5D6468;">
-						Analytics
-					</div>
-					<div class="app-section">
-						<span class="section-icon">
-							<i class="fa fa-bar-chart" aria-hidden="true"></i>
-						</span>
-						<span class="title">Analytics</span>
-					</div>
+					<a href="#/module/events">
+						<div style="padding: 20px 15px;color: #5D6468;">
+							Analytics
+						</div>
+					</a>
+					
+					<a href="#/module/analytics">
+						<div class="app-section">
+							<span class="section-icon">
+								<i class="fa fa-bar-chart" aria-hidden="true"></i>
+							</span>
+							<span class="title">Analytics</span>
+						</div>
+					</a>
 
 					<!-- MODULES -->
 					<div style="padding: 20px 15px;color: #5D6468;">
 						Modules
 					</div>
-					<div class="app-section">
-						<span class="section-icon">
-							<i class="fa fa-calendar-o" aria-hidden="true"></i>
-						</span>
-						<span class="title">Events</span>
-					</div>
-					<div class="app-section">
-						<span class="section-icon">
-							<i class="fa fa-futbol-o" aria-hidden="true"></i>
-						</span>
-						<span class="title">Sports</span>
-					</div>
-					<div class="app-section">
-						<span class="section-icon">
-							<i class="fa fa-map-marker" aria-hidden="true"></i>
-						</span>
-						<span class="title">Map</span>
-					</div>
-					<div class="app-section">
-						<span class="section-icon">
-							<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-						</span>
-						<span class="title">Schedule &amp; Grades</span>
-					</div>
+					<a href="#/module/events">
+						<div class="app-section">
+							<span class="section-icon">
+								<i class="fa fa-calendar-o" aria-hidden="true"></i>
+							</span>
+							<span class="title">Events</span>
+						</div>
+					</a>
+					<a href="#/module/sports">
+						<div class="app-section">
+							<span class="section-icon">
+								<i class="fa fa-futbol-o" aria-hidden="true"></i>
+							</span>
+							<span class="title">Sports</span>
+						</div>
+					</a>
+					<a href="#/module/maps">
+						<div class="app-section">
+							<span class="section-icon">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+							<span class="title">Map</span>
+						</div>
+					</a>
+					<a href="#/module/schedule">
+						<div class="app-section">
+							<span class="section-icon">
+								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+							</span>
+							<span class="title">Schedule &amp; Grades</span>
+						</div>
+					</a>
 
 					<!-- CONFIGURATIONS -->
 					<div style="padding: 20px 15px;color: #5D6468;">
 						Configurations
 					</div>
-					<div class="app-section">
-						<span class="section-icon">
-							<i class="fa fa-users" aria-hidden="true"></i>
-						</span>
-						<span class="title">Users</span>
-					</div>
-					<div class="app-section">
-						<span class="section-icon">
-							<i class="fa fa-paint-brush" aria-hidden="true"></i>
-						</span>
-						<span class="title">Styles</span>
-					</div>
+					<a href="#/module/users">
+						<div class="app-section">
+							<span class="section-icon">
+								<i class="fa fa-users" aria-hidden="true"></i>
+							</span>
+							<span class="title">Users</span>
+						</div>
+					</a>
+					<a href="#/module/styles">
+						<div class="app-section">
+							<span class="section-icon">
+								<i class="fa fa-paint-brush" aria-hidden="true"></i>
+							</span>
+							<span class="title">Styles</span>
+						</div>
+					</a>
 				</div>
 				<div class="inner-side-nav-container-footer">
 					<div style="width: 100%; padding: 15px; text-align:center;">
-						juancchavez <i style="float: right; font-size:16px;"class="fa fa-caret-square-o-left" aria-hidden="true"></i>
+						juancchavez <!-- <i style="float: right; font-size:16px;"class="fa fa-caret-square-o-left" aria-hidden="true"></i> -->
 					</div>
 				</div>
 			</div>
@@ -101,32 +141,15 @@
 			<!-- //////////////   MODULE CONTENT   //////////////-->
 			<div class="module-host">
 				<div class="module-contents">
-					<div class="module-contents-header">
-						Overview
-					</div>
-					<div style="background-color: lightgray; border: 1px dashed blue; height: 300px">
-						TESTING SIZE
-					</div>
-					<div style="background-color: lightgray; border: 1px dashed blue; height: 300px">
-						TESTING SIZE
-					</div>
-					<div style="background-color: lightgray; border: 1px dashed blue; height: 300px">
-						TESTING SIZE
-					</div>
-					<div style="background-color: lightgray; border: 1px dashed blue; height: 300px">
-						TESTING SIZE
-					</div>
-					<div style="background-color: lightgray; border: 1px dashed blue; height: 300px">
-						TESTING SIZE
-					</div>
-					<div style="background-color: lightgray; border: 1px dashed blue; height: 300px">
-						TESTING SIZE
+					<div ng-view>
 					</div>
 				</div>
 			</div>
 		</section>
 	</div>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="assets/js/cuApp.js"></script>
 	<script type="text/javascript" src="assets/js/controllers.js"></script>
 </body>
 </html>
