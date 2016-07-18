@@ -78,7 +78,7 @@ body {
 	bottom: 0;
 	right: 0;
 	overflow-y: auto;
-	min-width: 430px;
+	min-width: 650px;
 }
 .module-contents-header {
 	padding: 10px; 
@@ -154,4 +154,16 @@ body {
 
 .module-contents-header > div.feature {
 	flex-direction: column;
+}
+
+
+.feature-card > .choose-style-wrapper {
+	display: table;
+}
+
+.view-cards-demo {
+	height: 100%;
+	display: inline-block;
+	background-color: lightgray;
+	width: 30%;
 }

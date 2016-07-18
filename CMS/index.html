@@ -53,17 +53,20 @@
 					<!-- APP NAME -->
 					
 					<div class="app-name">
-						<a style="text-decoration:none;"href="#/">iCreighton &nbsp;</a> <i class="fa fa-cog" aria-hidden="true"></i>
+						<div class="section-label">
+							<a style="text-decoration:none;"href="#/">iCreighton &nbsp;</a>	
+						</div>
+						<i class="fa fa-cog" aria-hidden="true"></i>
 					</div>
 					
 
 					<!-- Analytics -->
-					<a href="#/module/events">
-						<div style="padding: 20px 15px;color: #5D6468;">
-							Analytics
-						</div>
-					</a>
+					<div class="section-label" style="padding: 20px 15px;color: #5D6468;">
+						Analytics
+					</div>
+					<hr class="section-hr-line" style="display:none;">
 					
+
 					<a href="#/module/analytics">
 						<div class="app-section">
 							<span class="section-icon">
@@ -72,11 +75,15 @@
 							<span class="title">Analytics</span>
 						</div>
 					</a>
+					<hr class="section-hr-line" style="display:none;">
 
 					<!-- MODULES -->
-					<div style="padding: 20px 15px;color: #5D6468;">
+					<div class="section-label" style="padding: 20px 15px;color: #5D6468;">
 						Modules
 					</div>
+					<hr class="section-hr-line" style="display:none;">
+
+
 					<a href="#/module/events">
 						<div class="app-section">
 							<span class="section-icon">
@@ -111,9 +118,12 @@
 					</a>
 
 					<!-- CONFIGURATIONS -->
-					<div style="padding: 20px 15px;color: #5D6468;">
+					<div class="section-label" style="padding: 20px 15px;color: #5D6468;">
 						Configurations
 					</div>
+					<hr class="section-hr-line" style="display:none;">
+
+
 					<a href="#/module/users">
 						<div class="app-section">
 							<span class="section-icon">
@@ -133,7 +143,7 @@
 				</div>
 				<div class="inner-side-nav-container-footer">
 					<div style="width: 100%; padding: 15px; text-align:center;">
-						juancchavez <!-- <i style="float: right; font-size:16px;"class="fa fa-caret-square-o-left" aria-hidden="true"></i> -->
+						juancchavez <i style="float: right; font-size:16px;"class="fa fa-caret-square-o-left" aria-hidden="true"></i>
 					</div>
 				</div>
 			</div>
@@ -147,6 +157,20 @@
 			</div>
 		</section>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			$("div.inner-side-nav-container-footer > div > i").click(function() {
+				$("div.app-section > span.title").toggle('slow');
+				$("hr.section-hr-line").toggle('slow');
+				$("div.section-label").toggle('slow');
+
+				var toggleWidth = $(".side-nav-bar").width() == 256 ? "100px" : "256px";
+				console.log('toggleWidth = ' + toggleWidth);
+		        $('.side-nav-bar').animate({ width: toggleWidth });
+		        $('.module-contents').animate({ left: toggleWidth });
+			});
+		});
+	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap-switch.min.js"></script>
 	<script type="text/javascript" src="assets/js/cuApp.js"></script>
